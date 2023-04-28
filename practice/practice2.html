@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banknote withdraw</title>
+
+    <style>
+
+        body{
+
+            background-color: yellow;
+            color: blue;
+            font-family: 'Segoe UI';
+            font-size: 18px;
+
+        }
+
+        input{
+
+            font-family: 'Segoe UI';
+            font-size: 18px;
+
+        }
+
+        div#valueTotal{
+
+            margin-top: 20px;
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Banknote withdraw</h1>
+    <input type="number" name="value" id="value">
+    <input type="button" value="Withdraw" onclick="banknote()">
+    <div id="valueTotal">Value: </div>
+    <div id="availableBanknotes">Available banknotes: </div>
+
+    <script>
+
+       function banknote(){
+
+            var svalue = window.document.getElementById('value')
+            var value = Number(svalue.value)
+            var v = window.document.getElementById('valueTotal')
+
+            var ab = window.document.getElementById('availableBanknotes')
+            var b100 = value / 100
+            var b50 = value/50
+            var b20 = value/20
+            var b10 = value/10
+            var b5 = value/5
+            var b2 = value/2
+            v.innerHTML = "Value: "+value
+            ab.innerHTML = "Available banknotes: "+
+            "R$100: "+b100+","+"R$50: "+b50+","+"R$20: "+b20+","+"R$10: "+b10+","+"R$ 5: "+b5+","+"R$2: "+b2
+            
+
+        }
+
+    </script>
+    
+</body>
+</html>

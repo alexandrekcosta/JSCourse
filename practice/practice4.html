@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Table</title>
+
+    <style>
+
+        body{
+
+            background-color: green;
+            font-size: 20px;
+            font-family: 'Segoe UI';
+            color: white;
+
+        }
+
+        input{
+
+            font-size: 20px;
+            font-family: 'Segoe UI';
+
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Math Table</h1>
+    <input type="number" name="n1" id="n1">
+    <input type="number" name="n2" id="n2">
+    <input type="button" value="Calculate" onclick="action()">
+    <div id="result">Result: </div>
+    <div id ="Sum">Sum: </div>
+    <div id="Subtraction">Subtraction: </div>
+    <div id="Multiplication">Multiplication: </div>
+    <div id="Division">Division: </div>
+
+    <script>
+        function action(){
+            var n1Start = window.document.getElementById('n1')
+            var n1 = Number(n1Start.value)
+            var n2Start = window.document.getElementById('n2')
+            var n2 = Number(n2Start.value)
+            var sum = n1 + n2
+            var sub = n1 - n2
+            var multi = n1 * n2
+            var div = n1 / n2
+            var sumOutput = window.document.getElementById('Sum')
+            sumOutput.innerHTML = "Sum: "+sum
+            var subOutput = window.document.getElementById('Subtraction')
+            subOutput.innerHTML = "Subtraction: "+sub
+            var multiOutput = window.document.getElementById('Multiplication')
+            multiOutput.innerHTML = "Multiplication: "+multi
+            var divOutput = window.document.getElementById('Division')
+            divOutput.innerHTML = "Division: "+div 
+        }
+    </script>
+</body>
+</html>
