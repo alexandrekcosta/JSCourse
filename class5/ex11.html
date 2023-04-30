@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department of Roads</title>
+</head>
+<body>
+    
+    <h1>Charging system</h1>
+    Velocity of car: <input type="number" name="txtvel" id="txtvel">
+                    <input type="button" value="Verify" onclick="action()">
+                    <div id="result"></div>
+
+                    <script>
+
+                        var txtv = window.document.getElementById("txtvel")
+
+                        function action(){
+
+                            var vel = Number(txtv.value)
+                            var res = window.document.getElementById("result")
+                            res.innerHTML = "<p>Your velocity equals: "+vel+" km/h</p>" + 
+                            "<p>Always use seat belt!</p>"
+                            
+                            if(vel >= 60){
+
+                                res.innerHTML = "<p>Your velocity equals: "+vel+" km/h</p>"+
+                                "<p>You suparssed speed limit,so you are going to be <strong>CHARGED</strong></p>"+
+                                "<p>Always use seat belt!</p>"
+
+                            }
+
+                        }
+
+                    </script>
+
+</body>
+</html>
