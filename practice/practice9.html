@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronic vote proper age</title>
+
+    <style>
+
+        body{
+
+            background: rgb(235,238,238);
+            background: linear-gradient(0deg, rgba(235,238,238,1) 0%, rgba(20,105,20,1) 100%);
+            font-family: 'Bush Script MT',cursive; 
+            color: aliceblue;
+        
+        }
+
+        input{
+
+            font-family: 'Bush Script MT',cursive;
+
+        }
+
+        div#result{
+
+            font-size: 24px;
+            font-family: 'Bush Script MT',cursive;
+            color: black;
+
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1>Electronic vote proper age</h1>
+    <input type="number" name="age" id="age">
+    <input type="button" value="Check" onclick="action()">
+    <div id="result"></div>
+
+    <script>
+
+        function action(){
+
+            var ageInit = window.document.getElementById('age')
+            var age = Number(ageInit.value)
+            var res = window.document.getElementById('result')
+
+            if(age < 16){
+
+                res.innerHTML = "You are not allowed to vote as you are "+age+" years old"
+
+
+            }else if(age >= 16 && age < 18 || age >= 65){
+
+                res.innerHTML = "You have right to optional vote as you are "+age+" years old"
+
+            }else if(age >=18){
+
+                res.innerHTML = "It is mandatory for you to vote as you are "+age+" years old"
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

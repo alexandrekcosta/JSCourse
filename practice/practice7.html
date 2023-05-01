@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekdays checker</title>
+</head>
+<body>
+    
+    <h1>Weekdays checker</h1>
+    <input type="button" value="Check!" onclick="action()">
+    <div id="result">Result: </div>
+
+    <script>
+
+        function action(){
+            var weekday = new Date()
+            var weekdayConfirm = weekday.getDay()
+            var inputWeekdayConfirm = window.document.getElementById('result')
+            var input = window.document.getElementById('txtWeekday')
+            var inputConfirm = Text(input.value)
+            switch(weekdayConfirm){
+
+                case 0:
+                    weekdayConfirm = "Sunday"
+                    inputWeekdayConfirm.innerHTML = " "+weekdayConfirm
+                    break
+                case 1:
+                    weekdayConfirm = "Monday"
+                    inputWeekdayConfirm.innerHTML = " " +weekdayConfirm
+                    break
+                case 2:
+                    weekdayConfirm = "Tuesday"
+                    inputWeekdayConfirm.innerHTML = " "+weekdayConfirm
+                case 3:
+                    weekdayConfirm = "Wednesday"
+                    inputWeekdayConfirm.innerHTML = " "+weekdayConfirm
+                case 4:
+                    weekdayConfirm = "Thursday"
+                    inputWeekdayConfirm.innerHTML =" "+weekdayConfirm
+                case 5:
+                    weekdayConfirm = "Friday"
+                    inputWeekdayConfirm.innerHTML = " "+weekdayConfirm
+                case 6:
+                    weekdayConfirm = "Saturday"
+                    inputWeekdayConfirm.innerHTML = " "+weekdayConfirm
+                default: 
+                    weekdayConfirm = "[ERROR] This day doesn't exist"
+                    inputWeekdayConfirm = " "+weekdayConfirm
+                    break
+
+
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
